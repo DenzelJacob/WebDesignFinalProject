@@ -1,0 +1,112 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Denzel Jacob's Homepage</title>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	</head>
+	<body style= "background-color:lightblue; font-family:Garamond" >
+		<center><h1 style = "font-family:Brush Script MT">Denzel Jacob's Homepage</h1></center>
+		
+		<script>
+			function jump_to_link(weblist) {
+				var url_number=weblist.selectedIndex;
+				location=weblist.options[url_number].value;
+			}
+			function independanceDays(CurrentDay) {
+				var XYear=CurrentDay.getFullYear();
+				var XDay=new Date("July,4,2021");
+				
+				var DayCount=(XDay-CurrentDay)/(1000*60*60*24);
+				DayCount = Math.round(DayCount);
+				DayCount = Math.round(DayCount);
+				return DayCount;
+			}
+			function MonthTxt (MonthNumber) {
+				var Month=new Array();
+				Month[1]="January";
+				Month[2]="February";
+				Month[3]="March";
+				Month[4]="April";
+				Month[5]="May";
+				Month[6]="June";
+				Month[7]="July";
+				Month[8]="August";
+				Month[9]="September";
+				Month[10]="October";
+				Month[11]="November";
+				Month[12]="December";
+				return Month[MonthNumber];
+			}
+			
+			
+			
+			var Today=new Date();
+			var day=Today.getDate();
+			var month=Today.getMonth() + 1;
+			var year=Today.getFullYear();
+			
+			var daysLeft=independanceDays(Today)+1;
+			
+			
+			document.writeln("<center><h3>Today's date is: " + MonthTxt(month) +" "+ day +", "+ year +"</h3></center>");
+			document.writeln("<center><h3>Days until July 4, 2021: "+ daysLeft+" days</h3></center>");
+		</script>
+
+		<center><img src="denzel.PNG" alt ="image of Denzel" width = "300" height = "500"></center>
+		<p>
+		<strong>About me:</strong><br/>
+			I am a college student studying at Rutgers University.<br/>
+			I'm currently interested in front-end development techonologies and I'm looking into React.js<br/>
+		I am majoring in Information Technology and Informatics and I wish to become a Full Stack developer some day!
+		</p>
+		
+		<p><strong>Three places I would like to visit are:</strong></p>
+		<center>
+			<table style ="width:90%">
+				<th>
+					<p><img src = "fuji.jpg" alt = "image of Mount Fuji" width = "300" height = "300"><br>Japan: </p>
+					<p style = "font-weight:normal">I always thought going to Japan would be interesting.<br/>However, I would greatly enjoy trying to hike up Mt.Fuji,<br/> one of Japans greatest landmarks</p>
+				</th>
+				
+				<th>
+					<p><img src = "korea.jpg" alt = "image of Korea" width ="300" height = "300"><br/>Korea: </p>
+					<p style = "font-weight:normal">I specifically wanted to visit Seoul the capital of Korea.<br/> It is a urban modern city with a rich culture and very delicious food.<br/>Korean barbecue and korean hotpot are a couple  of my favorite meals</p>
+				</th>
+				
+				<th>
+					<p><img src = "aussie.jpg" alt = "image of Australia" width ="300" height = "300"><br/>Australia:</p>
+					<p style ="font-weight:normal">The climate and the people of Australia have always intrigued me.<br/>The city of Sydney seems like a great place<br/> to grab a bite to eat and enjoy the weather.</p>
+				</th>
+				
+			</table>
+		</center>
+		
+		<div>
+			<form name="glinks">
+				<table cellpadding="5">
+					<tr>
+						<td>Here are my favorite websites:</td>
+						<td>
+							<select name="leg" onchange="jump_to_link(this);">
+								<option value = "javascript:location.reload()">Select a Web page on the favorites</option>
+								<option value = "http://www.youtube.com/">Youtube</option>
+								<option value = "http://www.robinhood.com/">Robinhood</option>
+								<option value = "http://www.gmail.com/">Gmail</option>
+								<option value = "http://www.crunchyroll.com/">Crunchyroll</option>
+								<option value = "http://www.freecodecamp.org">FreeCodeCamp</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</form>
+			</div>
+			
+			<p><strong>Project:</strong></p>
+			<ul>
+				<li><a href = "cointoss.html">Coin tossing game</a></li>	
+				<li><a href = "USDtoCADConverter">Currency converter</a></li>
+				<li><a href= "Node.js.docx">Node.js</a></li>
+				<li><a href = "MySQL.docx">MySQL</a></li>
+			</ul>
+			
+	</body>
+</html>

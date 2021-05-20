@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Coin Tossing Game</title>
+	</head>
+	<body>
+		
+		
+		<script>
+			var head = 0;
+			var tails = 0;
+			
+			for(var x = 0; x < 100; x++){
+				var coin = Math.round(Math.random());
+				if (coin == 1){
+					head++;
+				}
+				else{
+					tails++;
+				}
+			}
+		
+			document.writeln("<center><h1><p>Heads: "+ head +"</p></h1>");
+			document.writeln("<h1><p>Tails: "+ tails +"</p></h1>");
+			
+			
+			
+		</script>
+	<p><a href="cointoss.html">Toss another 100 coins</a></p>
+	<br/>
+	<p><a href="Homepage.html">Go back to Homepage</a></p></center>
+	</body>		
+</html>
